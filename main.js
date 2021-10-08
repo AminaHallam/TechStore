@@ -1,4 +1,4 @@
-var listOfProducts;
+var listOfProducts; 
 
 /** Get products from the json file and store it in a gobal variable */
 function loadProducts() {
@@ -20,6 +20,15 @@ function initSite() {
 
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
+for (var i = 0; i <listOfProducts.length; i++) {
+    if (listOfProducts [i] == "LG V30") {
+        console.log(listOfProducts[i]);
+        break;
+    }
+
+}
+
+
     // Check your console to see that the products are stored in the listOfProducts varible.
     console.log(listOfProducts);
 
