@@ -47,3 +47,30 @@
     cursor: pointer;
     
 }
+
+
+.phoneList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+
+    border: 1px solid rgb(85, 85, 238);
+
+    width: 25em;
+    height: 25em;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
