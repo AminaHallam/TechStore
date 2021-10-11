@@ -1,4 +1,4 @@
-var listOfProducts; 
+var listOfProducts;  
 
 /** Get products from the json file and store it in a gobal variable */
 function loadProducts() {
@@ -16,6 +16,40 @@ function loadProducts() {
 function initSite() {
     loadProducts();
     // This would also be a good place to initialize other parts of the UI
+}
+
+
+let initSite = () => {
+
+    let main = document.getElementsByTagName("main")[0]
+
+
+    phones.array.forEach((phone) => {
+
+    });
+
+
+
+    function generatePhoneList() {
+        let phoneList = document.createElement("div")
+        phoneList.classList.add("phoneList")
+
+        // image container
+        let imageContainer = document.createElement("div")
+        imageContainer.classList.add("imageContainer")
+
+        let phoneImg = document.createElement("img")
+        phoneImg.classList.add("phoneImg")
+        phoneImg.src = "../assets/iPhoneX.png"
+
+        imageContainer.append(phoneImg)
+
+        // Text container
+        
+
+
+    }
+    phoneList.append(imageContainer)
 }
 
 /** Uses the loaded products data to create a visible product list on the website */
@@ -38,3 +72,4 @@ for (var i = 0; i <listOfProducts.length; i++) {
     
     // TODO: Remove the console.log and these comments when you've read them.
 }
+
