@@ -18,6 +18,7 @@ function initSite() {
     // This would also be a good place to initialize other parts of the UI
 }
 
+window.addEventListener("load", initSite)
 
 let initSite = () => {
 
@@ -46,6 +47,26 @@ let initSite = () => {
 
         // Text container
         
+        let textContainer = document.createElement("div")
+        textContainer.classList.add("textContainer")
+
+        let nameText = document.createElement("h1")
+        nameText.innerText = products.title
+
+        let nameText = document.createElement("h3")
+        nameText.innerText = products.description 
+
+        let nameText = document.createElement("h3")
+        nameText.innerText = products.price 
+
+
+        textContainer.append(nameText, titleText, priceText)
+
+
+
+
+
+
 
 
     }
