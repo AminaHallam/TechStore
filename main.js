@@ -47,16 +47,6 @@ let initSite = () => {
 
         // Text container
         
-
-        // Button container
-        let buttonContainer = document.createElement("div")
-        buttonContainer.classList.add("buttonContainer")
-        let cartButton = document.createElement("button")
-        cartButton.innerText = "Lägg till i kundavagnen"
-        cartButton.addEventListener("click", () =>  {
-            logPhone(phone)
-        });
-
         let textContainer = document.createElement("div")
         textContainer.classList.add("textContainer")
 
@@ -72,16 +62,17 @@ let initSite = () => {
 
         textContainer.append(nameText, titleText, priceText)
 
-
-
-
-
-
-
-
+        // Button container
+        let buttonContainer = document.createElement("div")
+        buttonContainer.classList.add("buttonContainer")
+        let cartButton = document.createElement("button")
+        cartButton.innerText = "Lägg till i kundavagnen"
+        cartButton.addEventListener("click", () =>  {
+            logPhone(phone)
+        });
 
     }
-    phoneList.append(imageContainer, buttonContainer)
+    phoneList.append(imageContainer, textContainer, buttonContainer)
 }
 
 /** Uses the loaded products data to create a visible product list on the website */
