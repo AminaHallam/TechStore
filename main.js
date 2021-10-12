@@ -16,72 +16,70 @@ function loadProducts() {
 function initSite() {
     loadProducts();
     // This would also be a good place to initialize other parts of the UI
-}
+} 
 
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
-for (var i = 0; i <listOfProducts.length; i++) {
+
+    let main = document.getElementsByTagName("main")[0];
+    let div = document.createElement("div")
+    main.appendChild(div)
+
+    var listOfProducts =["prducts"];
+    for (var i = 0; i <listOfProducts.length; i++) {
     if (listOfProducts [i] === "LG V30") {
-        console.log(listOfProducts[i]);
-        break;
+    div.appendChild(listOfProducts)
+    console.log(listOfProducts[i]);
+    break;
     }
+    };
+    
 
 }
-    // Check your console to see that the products are stored in the listOfProducts varible.
-    console.log(listOfProducts);
-
-    window.addEventListener("loadProducts", initSite)
+    /*window.addEventListener("loadProducts", initSite) */
 
 
-    function generatePhoneList() {
-        let phoneList = document.createElement("div")
-        phoneList.classList.add("phoneList")
+function generatePhoneList() {
+    let phoneList = document.createElement("div")
+    phoneList.classList.add("phoneList")
 
-        // image container
-        let imageContainer = document.createElement("div")
-        imageContainer.classList.add("imageContainer")
+    // image container
+    let imageContainer = document.createElement("div2")
+    imageContainer.classList.add("imageContainer")
 
-        let phoneImg = document.createElement("img")
-        phoneImg.classList.add("phoneImg")
-        phoneImg.src = "products.json"
+    let phoneImg = document.createElement("img")
+    phoneImg.classList.add("phoneImg")
+    phoneImg.src = "./products.json.iPhoneX.png"
 
-        imageContainer.append(phoneImg)
+    imageContainer.append(phoneImg)
 
-        // Text container
+    // Text container
         
-        let textContainer = document.createElement("div")
-        textContainer.classList.add("textContainer")
+    let textContainer = document.createElement("div")
+    textContainer.classList.add("textContainer")
 
-        let nameText = document.createElement("h1")
-        nameText.innerText = products.title
+    let titleText = document.createElement("h1")
+    titleText.innerText = products.title
 
-        let descriptionText = document.createElement("h3")
-        descriptionText.innerText = products.description 
+    let descriptionText = document.createElement("h3")
+    descriptionText.innerText = products.description 
 
-        let priceText = document.createElement("h3")
-        priceText.innerText = products.price 
+    let priceText = document.createElement("h3")
+    priceText.innerText = products.price 
 
 
-        textContainer.append(nameText, titleText, priceText)
+    textContainer.append(nameText, titleText, priceText)
 
-        // Button container
-        let buttonContainer = document.createElement("div")
-        buttonContainer.classList.add("buttonContainer")
-        let cartButton = document.createElement("button")
-        cartButton.innerText = "Lägg till i kundavagnen"
-        cartButton.addEventListener("click", () =>  {
-            logPhone(phone)
-        });
+    // Button container
+    let buttonContainer = document.createElement("div")
+    buttonContainer.classList.add("buttonContainer")
+    let cartButton = document.createElement("button")
+    cartButton.innerText = "Lägg till i kundavagnen"
+    cartButton.addEventListener("click", () =>  {
+        logPhone(phone)
+    });
 
     phoneList.append(imageContainer, textContainer, buttonContainer)
-    }
-
-
-    
-    // Add your code here, remember to brake your code in to smaller function blocks
-    // to reduce complexity and increase readability. Each function should have
-    // an explainetory comment like the one for this function, see row 22.
-    
-    // TODO: Remove the console.log and these comments when you've read them.
 }
+
 
