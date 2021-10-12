@@ -18,17 +18,19 @@ function initSite() {
     // This would also be a good place to initialize other parts of the UI
 }
 
-window.addEventListener("load", initSite)
+/** Uses the loaded products data to create a visible product list on the website */
+function addProductsToWebpage() {
+for (var i = 0; i <listOfProducts.length; i++) {
+    if (listOfProducts [i] === "LG V30") {
+        console.log(listOfProducts[i]);
+        break;
+    }
 
-let initSite = () => {
+}
+    // Check your console to see that the products are stored in the listOfProducts varible.
+    console.log(listOfProducts);
 
-    let main = document.getElementsByTagName("main")[0]
-
-
-    phones.array.forEach((phone) => {
-
-    });
-
+    window.addEventListener("loadProducts", initSite)
 
 
     function generatePhoneList() {
@@ -41,7 +43,7 @@ let initSite = () => {
 
         let phoneImg = document.createElement("img")
         phoneImg.classList.add("phoneImg")
-        phoneImg.src = "./assets/iPhoneX.png"
+        phoneImg.src = "products.json"
 
         imageContainer.append(phoneImg)
 
@@ -53,11 +55,11 @@ let initSite = () => {
         let nameText = document.createElement("h1")
         nameText.innerText = products.title
 
-        let nameText = document.createElement("h3")
-        nameText.innerText = products.description 
+        let descriptionText = document.createElement("h3")
+        descriptionText.innerText = products.description 
 
-        let nameText = document.createElement("h3")
-        nameText.innerText = products.price 
+        let priceText = document.createElement("h3")
+        priceText.innerText = products.price 
 
 
         textContainer.append(nameText, titleText, priceText)
@@ -71,24 +73,11 @@ let initSite = () => {
             logPhone(phone)
         });
 
-    }
     phoneList.append(imageContainer, textContainer, buttonContainer)
-}
-
-/** Uses the loaded products data to create a visible product list on the website */
-function addProductsToWebpage() {
-for (var i = 0; i <listOfProducts.length; i++) {
-    if (listOfProducts [i] == "LG V30") {
-        console.log(listOfProducts[i]);
-        break;
     }
 
-}
 
-
-    // Check your console to see that the products are stored in the listOfProducts varible.
-    console.log(listOfProducts);
-
+    
     // Add your code here, remember to brake your code in to smaller function blocks
     // to reduce complexity and increase readability. Each function should have
     // an explainetory comment like the one for this function, see row 22.
