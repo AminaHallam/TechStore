@@ -18,6 +18,7 @@ function initSite() {
     // This would also be a good place to initialize other parts of the UI
 }
 
+window.addEventListener("load", initSite)
 
 let initSite = () => {
 
@@ -46,6 +47,7 @@ let initSite = () => {
 
         // Text container
         
+
         // Button container
         let buttonContainer = document.createElement("div")
         buttonContainer.classList.add("buttonContainer")
@@ -54,6 +56,28 @@ let initSite = () => {
         cartButton.addEventListener("click", () =>  {
             logPhone(phone)
         });
+
+        let textContainer = document.createElement("div")
+        textContainer.classList.add("textContainer")
+
+        let nameText = document.createElement("h1")
+        nameText.innerText = products.title
+
+        let nameText = document.createElement("h3")
+        nameText.innerText = products.description 
+
+        let nameText = document.createElement("h3")
+        nameText.innerText = products.price 
+
+
+        textContainer.append(nameText, titleText, priceText)
+
+
+
+
+
+
+
 
 
     }
