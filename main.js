@@ -41,12 +41,22 @@ let initSite = () => {
 
         let phoneImg = document.createElement("img")
         phoneImg.classList.add("phoneImg")
-        phoneImg.src = "../assets/iPhoneX.png"
+        phoneImg.src = "./assets/iPhoneX.png"
 
         imageContainer.append(phoneImg)
 
         // Text container
         
+
+        // Button container
+        let buttonContainer = document.createElement("div")
+        buttonContainer.classList.add("buttonContainer")
+        let cartButton = document.createElement("button")
+        cartButton.innerText = "Lägg till i kundavagnen"
+        cartButton.addEventListener("click", () =>  {
+            logPhone(phone)
+        });
+
         let textContainer = document.createElement("div")
         textContainer.classList.add("textContainer")
 
@@ -69,8 +79,9 @@ let initSite = () => {
 
 
 
+
     }
-    phoneList.append(imageContainer)
+    phoneList.append(imageContainer, buttonContainer)
 }
 
 /** Uses the loaded products data to create a visible product list on the website */
