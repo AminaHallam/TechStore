@@ -9,6 +9,7 @@ function loadProducts() {
     .then(function(products) {
         listOfProducts = products;
         addProductsToWebpage();
+
     });
 }
 
@@ -22,29 +23,22 @@ function initSite() {
 function addProductsToWebpage() {
 
     let main = document.getElementsByTagName("main")[0];
-    let div = document.createElement("div")
-    main.appendChild(div)
 
-    var listOfProducts =["prducts"];
     for (var i = 0; i <listOfProducts.length; i++) {
-    if (listOfProducts [i] === "LG V30") {
-    div.appendChild(listOfProducts)
-    console.log(listOfProducts[i]);
-    break;
-    }
+        let productContainer = createProductContainer(listOfProducts[i]);
+
+        main.appendChild(productContainer)
     };
-    
 
 }
-    /*window.addEventListener("loadProducts", initSite) */
 
 
-function generatePhoneList() {
-    let phoneList = document.createElement("div")
-    phoneList.classList.add("phoneList")
+function createProductContainer(product) {
+    let productContainer = document.createElement("div")
+    productContainer.classList.add("phoneList")
 
     // image container
-    let imageContainer = document.createElement("div2")
+    let imageContainer = document.createElement("div")
     imageContainer.classList.add("imageContainer")
 
     let phoneImg = document.createElement("img")
@@ -79,7 +73,10 @@ function generatePhoneList() {
         logPhone(phone)
     });
 
-    phoneList.append(imageContainer, textContainer, buttonContainer)
+    productContainer.append(imageContainer, textContainer, buttonContainer)
+    return productContainer
 }
 
-
+ window.addEventListener("load", () => {
+        initSite()
+    }) 
