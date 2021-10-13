@@ -29,9 +29,9 @@ function addProductsToWebpage() {
 
         main.appendChild(productContainer)
     };
- 
-    
 }
+
+
 
 
 function createProductContainer(product) {
@@ -41,11 +41,10 @@ function createProductContainer(product) {
     // image container
     let imageContainer = document.createElement("div")
     imageContainer.classList.add("imageContainer")
-    
-    
+
     let phoneImg = document.createElement("img")
     phoneImg.classList.add("phoneImg")
-    phoneImg.src = ""
+    phoneImg.src = "./assets/iPhoneX.png"
 
     imageContainer.append(phoneImg)
 
@@ -60,7 +59,7 @@ function createProductContainer(product) {
     let descriptionText = document.createElement("h3")
     descriptionText.innerText = product.description 
 
-    let priceText = document.createElement("h3")
+    let priceText = document.createElement("h2")
     priceText.innerText = product.price + " kr"
 
 

@@ -74,3 +74,21 @@
     align-items: center;
 
 }
+
+.buttonContainer {
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 250px;
+    height: 50px;
+    background-color: rgb(92, 92, 241);
+    border-radius: 10px;
+    color: white;
+}
+
+.phoneImg {
+    height: 70vh;
+    width: 300px;
+}
+
