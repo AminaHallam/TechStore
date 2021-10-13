@@ -29,21 +29,23 @@ function addProductsToWebpage() {
 
         main.appendChild(productContainer)
     };
-
+ 
+    
 }
 
 
 function createProductContainer(product) {
     let productContainer = document.createElement("div")
-    productContainer.classList.add("phoneList")
+    productContainer.classList.add("productContainer")
 
     // image container
     let imageContainer = document.createElement("div")
     imageContainer.classList.add("imageContainer")
-
+    
+    
     let phoneImg = document.createElement("img")
     phoneImg.classList.add("phoneImg")
-    phoneImg.src = "./products.json.iPhoneX.png"
+    phoneImg.src = ""
 
     imageContainer.append(phoneImg)
 
@@ -53,16 +55,16 @@ function createProductContainer(product) {
     textContainer.classList.add("textContainer")
 
     let titleText = document.createElement("h1")
-    titleText.innerText = products.title
+    titleText.innerText = product.title
 
     let descriptionText = document.createElement("h3")
-    descriptionText.innerText = products.description 
+    descriptionText.innerText = product.description 
 
     let priceText = document.createElement("h3")
-    priceText.innerText = products.price 
+    priceText.innerText = product.price + " kr"
 
 
-    textContainer.append(nameText, titleText, priceText)
+    textContainer.append(titleText, descriptionText, priceText)
 
     // Button container
     let buttonContainer = document.createElement("div")
