@@ -77,8 +77,9 @@ function createProductContainer(product) {
     let buttonContainer = document.createElement("div")
     buttonContainer.classList.add("buttonContainer")
 
-    let vagnContainer =document.createElement("div")
-    vagnContainer.classList.add("vagnContainer")
+    let icon = document.createElement("i")
+    icon.className = "fas fa-cart-arrow-down"
+    icon.classList.add("cartIcon")
 
     let buttonTextContainer = document.createElement("div")
     buttonTextContainer.innerText = "Lägg till i kundvagnen"
@@ -86,7 +87,7 @@ function createProductContainer(product) {
         logPhone(phone)
     });
 
-    buttonContainer.append(vagnContainer, buttonTextContainer)
+    buttonContainer.append(icon, buttonTextContainer)
     
     productContainer.append(textContainer, imageContainer, priceText, buttonContainer)
     return productContainer
