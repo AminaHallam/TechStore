@@ -48,20 +48,6 @@
     
 }
 
-
-.phoneList {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 100px;
-
-    border: 1px solid rgb(85, 85, 238);
-
-    width: 25em;
-    height: 25em;
-}
-
 .imageContainer {
     display: flex;
     justify-content: center;
@@ -73,23 +59,60 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px; 
+    font-family: 'Work Sans', sans-serif;
+}
+
+.titleText {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 50px;
 
 }
 
 .buttonContainer {
     display: flex;
     align-content: center;
-    justify-content: flex-end;
-    flex-direction: column;
-    width: 250px;
-    height: 50px;
-    background-color: rgb(92, 92, 241);
+    justify-content: center;
+    width: 370px;
+    height: 60px;
     border-radius: 10px;
+    background-color: rgb(12, 153, 247);
+    font-family: 'Roboto', sans-serif;
     color: white;
+    margin: 20px;
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+.priceText {
+    display: fle;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Libre Franklin', sans-serif; 
+    font-weight: bold;
+
 }
 
 .phoneImg {
-    height: 70vh;
-    width: 300px;
+    height: 50vh;
+    width: 220px;
+}
+
+.productContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.priceText {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.descriptionText {
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
