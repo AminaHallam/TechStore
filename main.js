@@ -32,8 +32,6 @@ function addProductsToWebpage() {
 }
 
 
-
-
 function createProductContainer(product) {
     let productContainer = document.createElement("div")
     productContainer.classList.add("productContainer")
@@ -45,8 +43,11 @@ function createProductContainer(product) {
     textContainer.classList.add("textContainer")
 
     let titleText = document.createElement("h1")
+    titleText.classList.add("titleText")
     titleText.innerText = product.title
+
     let descriptionText = document.createElement("h3")
+    descriptionText.classList.add("descriptionText")
     descriptionText.innerText = product.description
 
     textContainer.append(titleText, descriptionText)
@@ -67,6 +68,7 @@ function createProductContainer(product) {
     priceContainer.classList.add("priceContainer")
 
     let priceText = document.createElement("h2")
+    priceText.classList.add("priceText")
     priceText.innerText = product.price + " kr"
 
     priceContainer.append(priceText)
@@ -74,14 +76,17 @@ function createProductContainer(product) {
     // Button container
     let buttonContainer = document.createElement("div")
     buttonContainer.classList.add("buttonContainer")
-    
-    let cartButton = document.createElement("div")
-    cartButton.innerText = "Lägg till i kundavagnen"
-    cartButton.addEventListener("click", () =>  {
+
+    let vagnContainer =document.createElement("div")
+    vagnContainer.classList.add("vagnContainer")
+
+    let buttonTextContainer = document.createElement("div")
+    buttonTextContainer.innerText = "Lägg till i kundvagnen"
+    buttonTextContainer.addEventListener("click", () =>  {
         logPhone(phone)
     });
 
-    buttonContainer.append(cartButton)
+    buttonContainer.append(vagnContainer, buttonTextContainer)
     
     productContainer.append(textContainer, imageContainer, priceText, buttonContainer)
     return productContainer
