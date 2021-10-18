@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+header {
+    position: fixed;
+}
+
 #Title {
     display: flex;
     background-color: black;
@@ -66,6 +70,7 @@
 .titleText {
     font-family: 'Work Sans', sans-serif;
     font-size: 50px;
+    padding-top: 70px;
 
 }
 
@@ -130,7 +135,58 @@
 
 span {
     margin-top: 40px;
-    font-size: 20px
+    font-size: 20px;
+}
+      
+  
+/* ipad */
+@media screen and (max-width: 1024px) {
+    .phoneImg {
+        width: 260px;
+        height: 480px;
+    }
+    
+}
+
+/* mobil */
+@media screen and (max-width: 420px) {
+    .descriptionText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+    }
+    .buttonContainer{
+        font-size: 20px;
+    }
+    .cartIcon{
+        font-size: 18px;
+        
+    }
+    .titleText{
+        font-size: 40px;
+    }
+    #Title {
+        font-size: 15px;
+        height: 60px;
+    }
+    .techstore {
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    .fa-shopping-cart{
+        font-size: 25px;
+        padding-right: 25px;
+        padding-top: 18px;
+    }
+    .phoneImg {
+        width: 230px;
+        height: 400px;
+    }
+    .buttonContainer {
+        width: 70%;
+        height: 50px;
+    }
 
 }
 
