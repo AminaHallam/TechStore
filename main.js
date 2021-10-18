@@ -84,7 +84,7 @@ function createProductContainer(product) {
     let buttonTextContainer = document.createElement("div")
     buttonTextContainer.innerText = "Lägg till i kundvagnen"
     buttonTextContainer.addEventListener("click", () =>  {
-        logPhone(phone)
+        addCartList(product)
     });
 
     buttonContainer.append(icon, buttonTextContainer)
@@ -96,3 +96,7 @@ function createProductContainer(product) {
  window.addEventListener("load", () => {
         initSite()
     }) 
+
+function addCartList(product) {
+    console.log(product); 
+}
