@@ -84,7 +84,7 @@ function createProductContainer(product) {
     let buttonTextContainer = document.createElement("div")
     buttonTextContainer.innerText = "Lägg till i kundvagnen"
     buttonTextContainer.addEventListener("click", () =>  {
-        addCartList(product)
+        addToCart(product)
     });
 
     buttonContainer.append(icon, buttonTextContainer)
@@ -93,10 +93,81 @@ function createProductContainer(product) {
     return productContainer
 }
 
- window.addEventListener("load", () => {
-        initSite()
-    }) 
+window.addEventListener("load", () => {
+    initSite()
+}) 
 
-function addCartList(product) {
-    console.log(product); 
+
+function addToCart(product) {
+    console.log(product);
+
+    let cart = localStorage.getItem("cart")
+
+    if(cart) {
+        cart = JSON.parse(cart)
+    } else {
+        cart = []
+    }
+
+    let productIndex = cart.findIndex((cartItem) => {
+        return cartItem.product.name == product.name
+    })
+    // FINNS PRODUKTEN SOM SKALL SPARAS?
+
+    // HITTA PRODUKT
+
+    if(productIndex >= 0) {
+        cart[productIndex].quantity++
+    } else {
+        cart.push({
+            product: product,
+            quantity: 1
+        })
+    }
+
+    cart.push(product[productIndex])
+
+    localStorage.setItem("cart", JSON.stringify(cart))
 }
+
+
+function getNrOfCartItems() {
+    let priceContainer = document.getElementsByTagName("span") [0]
+    
+    let saveproducts = localStorage.getItem("saveproducts")
+    
+    let amount = 0 
+    
+    
+    
+    priceContainer.inneText = amount 
+    
+}
+
+
+
+
+    /*for (var i = 0; i <addToCart.length; i++) {
+        product[i].addEventListener('click', () => {
+            cartNumbers();
+        })
+
+    }; */
+
+
+
+    
+let cart = [
+    {
+        product: {title: "Iphone X"},
+        quantity: 2
+    },
+    {
+        product: {title: "LG"},
+        quantity: 4
+    },
+    {
+        product: {title: "Nokia X"},
+        quantity: 1
+    },
+]
