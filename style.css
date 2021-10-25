@@ -87,6 +87,7 @@ header {
     margin: 20px;
     padding-top: 12px;
     font-size: 27px;
+    cursor: pointer;
 }
 
 .priceText {
@@ -134,8 +135,8 @@ header {
 }
 
 span {
-    margin-top: 40px;
-    font-size: 20px;
+    padding-top: 15px;
+    font-size: 60px;
 }
       
   
@@ -145,11 +146,15 @@ span {
         width: 260px;
         height: 480px;
     }
+    .span {
+        padding-top: 10px;
+        font-size: 15px;
+    }
     
 }
 
 /* mobil */
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 600px) {
     .descriptionText {
         display: flex;
         flex-direction: column;
@@ -186,6 +191,10 @@ span {
     .buttonContainer {
         width: 70%;
         height: 50px;
+    }
+    span {
+        padding-top: 15px; 
+        font-size: 30px;
     }
 
 }
