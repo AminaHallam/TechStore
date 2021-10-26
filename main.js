@@ -110,11 +110,8 @@ function addToCart(product) {
     }
 
     let productIndex = cart.findIndex((cartItem) => {
-        return cartItem.product.name == product.name
+        return cartItem.product.title == product.title
     })
-    // FINNS PRODUKTEN SOM SKALL SPARAS?
-
-    // HITTA PRODUKT
 
     if(productIndex >= 0) {
         cart[productIndex].quantity++
@@ -125,23 +122,28 @@ function addToCart(product) {
         })
     }
 
-    cart.push(product[productIndex])
-
     localStorage.setItem("cart", JSON.stringify(cart))
 }
 
 
 function getNrOfCartItems() {
-    let priceContainer = document.getElementsByTagName("span") [0]
+    let priceContainer = document.getElementsByTagName("span")[0]
     
-    let saveproducts = localStorage.getItem("saveproducts")
+    let saveProducts = localStorage.getItem("saveProducts")
     
     let amount = 0 
     
-    
+    if(!saveProducts) {
+
+        let saveProducts = JSON.parse(cart)
+        cart.forEach((cartItem) => {
+            amount += cartItem.quantity
+        })
+    }
     
     priceContainer.inneText = amount 
     
+    localStorage.setItem("saveProducts", JSON.stringify(saveProducts))
 }
 
 
