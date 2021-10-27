@@ -146,9 +146,9 @@ span {
         width: 260px;
         height: 480px;
     }
-    .span {
+    span {
         padding-top: 10px;
-        font-size: 15px;
+        font-size: 60px;
     }
     
 }
