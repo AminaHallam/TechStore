@@ -19,7 +19,7 @@ function initSite() {
     // This would also be a good place to initialize other parts of the UI
 } 
 
-/** Uses the loaded products data to create a visible product list on the website */
+
 function addProductsToWebpage() {
 
     let main = document.getElementsByTagName("main")[0];
@@ -95,12 +95,12 @@ function createProductContainer(product) {
 
 window.addEventListener("load", () => {
     initSite()
+    getNrOfCartItems()
 }) 
 
 
 function addToCart(product) {
-    console.log(product);
-
+    console.log(product)
     let cart = localStorage.getItem("cart")
 
     if(cart) {
@@ -123,53 +123,30 @@ function addToCart(product) {
     }
 
     localStorage.setItem("cart", JSON.stringify(cart))
+    getNrOfCartItems()
 }
-
 
 function getNrOfCartItems() {
-    let priceContainer = document.getElementsByTagName("span")[0]
-    
-    let saveProducts = localStorage.getItem("saveProducts")
-    
-    let amount = 0 
-    
-    if(!saveProducts) {
+    let saveProducts = document.getElementsByTagName("span")[0]
 
-        let saveProducts = JSON.parse(cart)
-        cart.forEach((cartItem) => {
-            amount += cartItem.quantity
-        })
-    }
+    let cart = localStorage.getItem("cart")
     
-    priceContainer.inneText = amount 
     
-    localStorage.setItem("saveProducts", JSON.stringify(saveProducts))
+    let amount = 0
+    
+    if(!cart) {
+        saveProducts.innerText = amount
+        return
+    } 
+
+    cart = JSON.parse(cart)
+    cart.forEach((cartItem) => {
+        amount += cartItem.quantity 
+    })
+    console.log(amount) 
+
+    saveProducts.innerText = amount 
+    
 }
 
 
-
-
-    /*for (var i = 0; i <addToCart.length; i++) {
-        product[i].addEventListener('click', () => {
-            cartNumbers();
-        })
-
-    }; */
-
-
-
-    
-let cart = [
-    {
-        product: {title: "Iphone X"},
-        quantity: 2
-    },
-    {
-        product: {title: "LG"},
-        quantity: 4
-    },
-    {
-        product: {title: "Nokia X"},
-        quantity: 1
-    },
-]
