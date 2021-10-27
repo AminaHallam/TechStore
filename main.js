@@ -1,4 +1,4 @@
-var listOfProducts;  
+var listOfProducts;
 
 /** Get products from the json file and store it in a gobal variable */
 function loadProducts() {
@@ -76,6 +76,10 @@ function createProductContainer(product) {
     // Button container
     let buttonContainer = document.createElement("div")
     buttonContainer.classList.add("buttonContainer")
+    buttonContainer.addEventListener("click", () =>  {
+        addToCart(product)
+    });
+
 
     let icon = document.createElement("i")
     icon.className = "fas fa-cart-arrow-down"
@@ -83,9 +87,6 @@ function createProductContainer(product) {
 
     let buttonTextContainer = document.createElement("div")
     buttonTextContainer.innerText = "Lägg till i kundvagnen"
-    buttonTextContainer.addEventListener("click", () =>  {
-        addToCart(product)
-    });
 
     buttonContainer.append(icon, buttonTextContainer)
     
@@ -130,8 +131,7 @@ function getNrOfCartItems() {
     let saveProducts = document.getElementsByTagName("span")[0]
 
     let cart = localStorage.getItem("cart")
-    
-    
+      
     let amount = 0
     
     if(!cart) {
@@ -141,12 +141,10 @@ function getNrOfCartItems() {
 
     cart = JSON.parse(cart)
     cart.forEach((cartItem) => {
-        amount += cartItem.quantity 
+        amount += cartItem.quantity
     })
     console.log(amount) 
 
     saveProducts.innerText = amount 
     
 }
-
-
