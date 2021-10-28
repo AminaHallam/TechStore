@@ -101,7 +101,7 @@ window.addEventListener("load", () => {
 
 
 function addToCart(product) {
-    console.log(product)
+    
     let cart = localStorage.getItem("cart")
 
     if(cart) {
@@ -143,7 +143,6 @@ function getNrOfCartItems() {
     cart.forEach((cartItem) => {
         amount += cartItem.quantity
     })
-    // console.log(amount)
 
     saveProducts.innerText = amount 
     
