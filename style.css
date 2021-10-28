@@ -7,6 +7,10 @@ header {
     position: fixed;
 }
 
+main {
+    padding-top: 100px;
+}
+
 #Title {
     display: flex;
     background-color: black;
@@ -36,7 +40,7 @@ header {
     
 }
 
-.fa-shopping-cart {
+.headerCartIcon {
     display: flex;
     align-items: center;
     justify-items: center;
@@ -49,7 +53,6 @@ header {
     color: white;
     background-color: black;
     cursor: pointer;
-    
 }
 
 .imageContainer {
@@ -63,7 +66,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px; 
+     
     font-family: 'Work Sans', sans-serif;
 }
 
@@ -100,8 +103,8 @@ header {
 }
 
 .phoneImg {
-    height: 50vh;
-    width: 220px;
+    width: 260px;
+    height: 480px;
 }
 
 .productContainer {
@@ -138,6 +141,28 @@ span {
     padding-top: 15px;
     font-size: 60px;
 }
+
+.kundvagnSida {
+    display: flex;
+    font-size: 25px;
+    padding-top: 30px;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: row;
+
+
+}
+
+.kundvagnSida .fa-shopping-cart {
+    color:black; 
+    display: flex;
+    font-size: 35px;
+    padding-right: 15px;
+
+}
+
+
       
   
 /* ipad */
@@ -155,6 +180,10 @@ span {
 
 /* mobil */
 @media screen and (max-width: 600px) {
+    main {
+        padding: 20px; 
+    }
+
     .descriptionText {
         display: flex;
         flex-direction: column;
@@ -162,22 +191,26 @@ span {
         font-size: 12px;
     }
     .buttonContainer{
-        font-size: 20px;
+        font-size: 18px;
     }
     .cartIcon{
-        font-size: 18px;
+        font-size: 15px;
+        padding-right: 10px;
+        padding-top: 4px;
+        padding-left: 5px;
         
     }
     .titleText{
-        font-size: 40px;
+        font-size: 50px;
+        padding-top: 40px;
     }
     #Title {
-        font-size: 15px;
+        font-size: 12px;
         height: 60px;
     }
     .techstore {
         padding-left: 10px;
-        padding-top: 10px;
+        padding-top: 18px;
     }
     .fa-shopping-cart{
         font-size: 25px;
@@ -185,16 +218,27 @@ span {
         padding-top: 18px;
     }
     .phoneImg {
-        width: 230px;
-        height: 400px;
+        width: 180px;
+        height: 350px;
     }
     .buttonContainer {
-        width: 70%;
-        height: 50px;
+        width: 60%;
+        height: 45px;
     }
     span {
         padding-top: 15px; 
         font-size: 30px;
+    }
+
+    .kundvagnSida {
+        font-size: 10px;
+        padding: 60px; 
+    }
+
+    .kundvagnSida .fa-shopping-cart {
+        padding-top: 0%;
+        font-size: 20px;
+        padding-right: 10px;
     }
 
 }
