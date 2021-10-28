@@ -79,7 +79,7 @@ function createProductContainer(product) {
     buttonContainer.addEventListener("click", () =>  {
         addToCart(product)
     });
-
+    
 
     let icon = document.createElement("i")
     icon.className = "fas fa-cart-arrow-down"
@@ -143,7 +143,7 @@ function getNrOfCartItems() {
     cart.forEach((cartItem) => {
         amount += cartItem.quantity
     })
-    console.log(amount) 
+    // console.log(amount)
 
     saveProducts.innerText = amount 
     
