@@ -89,37 +89,38 @@ function removeItemFromCart() {
 // End Of sale Button 
 
 function createEndOfSaleContainer(cart) {
+
     let totalPrice = 0
     cart.forEach((cartItem) => {
         totalPrice += cartItem.product.price * cartItem.quantity
     })
 
-    let PriceOfItemContainer = document.getElementsByClassName("sectionPrice")
-    PriceOfItemContainer.classList.add("PriceOfItemContainer")
+    let priceAndCheckoutSection = document.getElementsByClassName("sectionPrice")[0]
 
+    // Creates container for Total price
     let totalPriceContainer = document.createElement("div")
     totalPriceContainer.classList.add("totalPriceContainer")
-    totalPriceContainer.innerText = "Totalt pris:" + product.price
+    totalPriceContainer.innerText = "Totalt pris:" + totalPrice
 
+    // 
     let endOfSaleButtonContainer = document.createElement("div")
     endOfSaleButtonContainer.classList.add("endOfSaleButtonContainer")
-    endOfSaleButtonContainer.addEventListener("click", () => {
-        // Töm carten (cart i localstorage) och navigera till startsidan
-    })
-
-    totalPriceContainer.append(endOfSaleButtonContainer)
-
-    let checkIcon = document.createElement("i")
-    checkIcon.className = "fas fa-check"
-    checkIcon.classList.add("checkLogo")
     
     let endOfSaleButton = document.createElement("div")
     endOfSaleButton.classList.add("endOfSaleButton")
     endOfSaleButton.innerText = "Slutför ditt köp"
+    endOfSaleButton.addEventListener("click", () => {
+        // Töm carten (cart i localstorage) och navigera till startsidan
+    })
 
-    checkIcon.append(endOfSaleButton)
+    let checkIcon = document.createElement("i")
+    checkIcon.className = "fas fa-check"
+    checkIcon.classList.add("checkLogo")
 
-    PriceOfItemContainer.append(totalPriceContainer, checkIcon)
+    endOfSaleButton.append(checkIcon)
+    endOfSaleButtonContainer.append(endOfSaleButton)
+
+    priceAndCheckoutSection.append(totalPriceContainer, endOfSaleButtonContainer)
       
 
 }
