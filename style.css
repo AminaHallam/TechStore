@@ -9,6 +9,7 @@ header {
 
 main {
     padding-top: 50px;
+    flex-direction: column; 
 }
 
 #Title {
@@ -142,6 +143,11 @@ span {
     font-size: 60px;
 }
 
+.sectionCart {
+    display: flex;
+    flex-direction: row; 
+
+}
 .kundvagnSida {
     display: flex;
     font-size: 35px;
@@ -160,6 +166,10 @@ span {
     font-size: 45px;
     padding-right: 15px;
 
+}
+
+.checkLogo {
+    font-size: 20px;
 }
 
 
