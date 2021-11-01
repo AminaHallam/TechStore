@@ -76,8 +76,8 @@ function createCartContainer(cartItem) {
     return itemContainer
 }
 
-function removeItemFromCart(cartItem) {
-    localStorage.removeItem(cartItem)
+function removeItemFromCart() {
+    localStorage.removeItem("cart")
 }
 
 
@@ -103,7 +103,6 @@ function getNrOfCartItems() {
 
 getNrOfCartItems()
 getProductsFromCart()           //kallade på funktionen
-
 
 
 
