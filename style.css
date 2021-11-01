@@ -15,18 +15,21 @@ main {
     display: flex;
     background-color: black;
     width: 100%;
-    height: 100px;
+    height: 80px;
     font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     
 
 }
 
 .techstore {
+    display: flex;
+    justify-content: center;
     padding-left: 20px;
-    padding-top: 15px;
+    padding-top: 10px;
     color: white;
     text-decoration: none;
+    height: 10px;
 }
 
 .kundvagn {
@@ -36,7 +39,7 @@ main {
     justify-items: flex-end;
     flex-grow: 1;
     flex-direction: row;
-    background-color: black;
+    /* background-color: black; */
     
 }
 
@@ -48,7 +51,7 @@ main {
     padding-right: 50px;
     padding-top: 25px;
     padding-left: 10px;
-    font-size: 50px;
+    font-size: 35px;
     text-decoration: none;
     color: white;
     background-color: black;
@@ -103,8 +106,8 @@ main {
 }
 
 .phoneImg {
-    width: 260px;
-    height: 480px;
+    width: 100%;
+    height: 300px;
 }
 
 .productContainer {
@@ -139,13 +142,13 @@ main {
 
 span {
     padding-top: 15px;
-    font-size: 60px;
+    font-size: 45px;
 }
 
 .kundvagnSida {
     display: flex;
     font-size: 35px;
-    padding-top: 150px;
+    padding-top: 120px;
     font-family: 'Roboto', sans-serif;
     align-items: center;
     justify-content: center; 
@@ -168,12 +171,12 @@ span {
 /* ipad */
 @media screen and (max-width: 1024px) {
     .phoneImg {
-        width: 260px;
-        height: 480px;
+        width: 100%;
+        height: 300px;
     }
     span {
         padding-top: 15px;
-        font-size: 60px;
+        font-size: 45px;
     }
     
 }
@@ -210,7 +213,6 @@ span {
     }
     .techstore {
         padding-left: 10px;
-        padding-top: 18px;
     }
     .fa-shopping-cart{
         font-size: 25px;
