@@ -8,7 +8,7 @@ header {
 }
 
 main {
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 #Title {
@@ -144,20 +144,20 @@ span {
 
 .kundvagnSida {
     display: flex;
-    font-size: 25px;
-    padding-top: 30px;
+    font-size: 35px;
+    padding-top: 150px;
     font-family: 'Roboto', sans-serif;
     align-items: center;
     justify-content: center; 
     flex-direction: row;
-
+    
 
 }
 
 .kundvagnSida .fa-shopping-cart {
     color:black; 
     display: flex;
-    font-size: 35px;
+    font-size: 45px;
     padding-right: 15px;
 
 }
