@@ -247,16 +247,5 @@ span {
         font-size: 30px;
     }
 
-    .kundvagnSida {
-        font-size: 10px;
-        padding: 60px; 
-    }
-
-    .kundvagnSida .fa-shopping-cart {
-        padding-top: 0%;
-        font-size: 20px;
-        padding-right: 10px;
-    }
-
 }
 

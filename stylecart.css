@@ -108,7 +108,52 @@ main {
 
 /* mobil */
 @media screen and (max-width: 600px) {
+    .sectionCart {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .kundvagnSida .fa-shopping-cart {
+        padding-top: 0%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .itemImg {
+        height: 100px;
+    }
+    .itemTitle {
+        font-size: 25px;
+    }
+    .itemPrice {
+        font-size: 10px;
+    }
+    .removeItemButtonContainer {
+        justify-content: space-between;
+        width: 80px;
+        height: 25px;
+        font-size: 12px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 25px;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .itemImg {
+        height: 80px;
+    }
+    .itemTitle {
+        font-size: 20px;
+    }
+    .removeItemButtonContainer {
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        padding: 11px;
+    }
+    .fa-trash-alt {
+        margin-right: 10px;
+    }
     
-
-
 }

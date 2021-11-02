@@ -12,7 +12,6 @@ function getProductsFromCart() {
     }
     
     let section = document.getElementsByClassName("sectionCart")[0];
-    console.log(cart)
     for (var i = 0; i <cart.length; i++) {
         let itemContainer = createCartContainer(cart[i]);
         
@@ -61,7 +60,7 @@ function createCartContainer(cartItem) {
     let removeItemButtonContainer = document.createElement("div")
     removeItemButtonContainer.classList.add("removeItemButtonContainer")
     removeItemButtonContainer.addEventListener("click", () => {
-        removeItemFromCart(cartItem)
+        removeItemFromCart()
     });
 
     // Remove Button 
@@ -81,10 +80,10 @@ function createCartContainer(cartItem) {
 }
 
 function removeItemFromCart() {
-    localStorage.removeItem("cart")
+    
 }
 
-
+// localStorage.removeItem("title")
 
 // End Of sale Button 
 
