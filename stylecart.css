@@ -167,31 +167,6 @@ main {
     }
 }
 
-@media screen and (max-width: 800px) {
-    .itemImg {
-        height: 100px;
-    }
-    .itemTitle {
-        font-size: 25px;
-    }
-    .itemPrice {
-        font-size: 10px;
-    }
-    .removeItemButtonContainer {
-        justify-content: space-between;
-        width: 80px;
-        height: 25px;
-        font-size: 12px;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-bottom: 25px;
-        border-radius: 5px;
-    }
-}
-
-/* Ipad */
-@media screen and (max-width: 700px) {
-  
 
 
 @media screen and (max-width: 400px) {
