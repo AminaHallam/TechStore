@@ -80,7 +80,7 @@ function createCartContainer(cartItem) {
 }
 
 function removeItemFromCart() {
-
+    
     localStorage.removeItem("cart")
 }
 
