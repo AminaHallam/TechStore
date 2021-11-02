@@ -80,7 +80,8 @@ function createCartContainer(cartItem) {
 }
 
 function removeItemFromCart() {
-    
+
+    localStorage.removeItem("cart")
 }
 
 // localStorage.removeItem("title")
@@ -109,6 +110,7 @@ function createEndOfSaleContainer(cart) {
     endOfSaleButton.classList.add("endOfSaleButton")
     endOfSaleButton.innerText = "Slutför ditt köp"
     endOfSaleButton.addEventListener("click", () => {
+        alert("Tack för ditt köp!")
         // Töm carten (cart i localstorage) och navigera till startsidan
     })
 
@@ -146,8 +148,12 @@ function getNrOfCartItems() {
     saveProducts.innerText = amount 
 }
 
-getNrOfCartItems()
-getProductsFromCart()           
+
+window.addEventListener("load", () => {
+   getNrOfCartItems()
+    getProductsFromCart() 
+}) 
+          
 
 
 
