@@ -100,7 +100,7 @@ function createEndOfSaleContainer(cart) {
     // Creates container for Total price
     let totalPriceContainer = document.createElement("div")
     totalPriceContainer.classList.add("totalPriceContainer")
-    totalPriceContainer.innerText = "Totalt pris:" + totalPrice
+    totalPriceContainer.innerText = "Totalt pris:" + " " + totalPrice + " " + "kr"
 
     // 
     let endOfSaleButtonContainer = document.createElement("div")
@@ -117,8 +117,8 @@ function createEndOfSaleContainer(cart) {
     checkIcon.className = "fas fa-check"
     checkIcon.classList.add("checkLogo")
 
-    endOfSaleButton.append(checkIcon)
-    endOfSaleButtonContainer.append(endOfSaleButton)
+   
+    endOfSaleButtonContainer.append(checkIcon, endOfSaleButton)
 
     priceAndCheckoutSection.append(totalPriceContainer, endOfSaleButtonContainer)
       

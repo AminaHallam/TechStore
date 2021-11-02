@@ -46,3 +46,69 @@ main {
 .itemPrice {
     font-size: 15px;
 }
+
+
+.checkLogo {
+    font-size: 20px;
+}
+
+.endOfSaleButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 220px;
+    height: 50px;
+    background-color: rgb(12, 153, 247);
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    margin-top: 38px;
+    cursor: pointer;
+}
+
+.totalPriceContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-top: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    
+   
+}
+
+.endOfSaleButton {
+    color: white;
+
+}
+
+.checkLogo {
+    color: white;
+    margin-right: 15px;
+    font-size: 18px; 
+}
+
+.sectionPrice .PriceOfItemContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    
+}
+
+/* ipad */
+@media screen and (max-width: 1100px) {
+    
+
+}
+
+
+/* mobil */
+@media screen and (max-width: 600px) {
+    
+
+
+}

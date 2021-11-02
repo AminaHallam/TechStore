@@ -173,8 +173,11 @@ span {
 
 }
 
-.checkLogo {
-    font-size: 20px;
+.sectionPrice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
