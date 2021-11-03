@@ -1,6 +1,5 @@
 
 
-
 function getProductsFromCart() {
     
     let cart = localStorage.getItem("cart")         
@@ -56,15 +55,16 @@ function createCartContainer(cartItem) {
 
     itemPriceContainer.append(itemPrice)
 
-    //Button Container
+    //REMOVE Button Container
     let removeItemButtonContainer = document.createElement("div")
     removeItemButtonContainer.classList.add("removeItemButtonContainer")
     removeItemButtonContainer.addEventListener("click", () => {
-        removeItemFromCart()
+        removeItemFromCart(cartItem)
+        getNrOfCartItems()
+        JSON.parse(localStorage.getItem("cart"))
     });
 
-    // Remove Button 
-
+    // Remove Button
     let icon = document.createElement("i")
     icon.className = "far fa-trash-alt"
     icon.classList.add("trashcanCart")
@@ -79,12 +79,20 @@ function createCartContainer(cartItem) {
     return itemContainer
 }
 
-function removeItemFromCart() {
+//function to remove cart items
+function removeItemFromCart(cartItem) {
     
-    localStorage.removeItem("cart")
-}
+    let cart = JSON.parse(localStorage.getItem("cart"));
 
-// localStorage.removeItem("title")
+    for (var i =0; i< cart.length; i++) {
+        if (cartItem.product.title == cart[i].product.title) {
+            cart.splice(i, 1);
+        }
+    }
+    cart = JSON.stringify(cart);
+
+    localStorage.setItem("cart", cart);
+}
 
 // End Of sale Button 
 
@@ -150,10 +158,6 @@ function getNrOfCartItems() {
 
 
 window.addEventListener("load", () => {
-   getNrOfCartItems()
-    getProductsFromCart() 
-}) 
-          
-
-
-
+    getNrOfCartItems()
+    getProductsFromCart()
+})
