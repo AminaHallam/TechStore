@@ -1,6 +1,6 @@
 var listOfProducts;
 
-/** Get products from the json file and store it in a gobal variable */
+// Get products from the json file and store it in a global variable
 function loadProducts() {
     fetch("./products.json")
     .then(function(response) {
@@ -13,12 +13,10 @@ function loadProducts() {
     });
 }
 
-
 function initSite() {
     loadProducts();
-    // This would also be a good place to initialize other parts of the UI
-} 
 
+} 
 
 function addProductsToWebpage() {
 
@@ -35,7 +33,6 @@ function addProductsToWebpage() {
 function createProductContainer(product) {
     let productContainer = document.createElement("div")
     productContainer.classList.add("productContainer")
-
 
     // Text container
     
@@ -62,7 +59,6 @@ function createProductContainer(product) {
     
     imageContainer.append(phoneImg)
 
-
     //Price container
     let priceContainer = document.createElement("div")
     priceContainer.classList.add("priceContainer")
@@ -80,7 +76,6 @@ function createProductContainer(product) {
         addToCart(product)
     });
     
-
     let icon = document.createElement("i")
     icon.className = "fas fa-cart-arrow-down"
     icon.classList.add("cartIcon")

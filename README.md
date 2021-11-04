@@ -1,11 +1,11 @@
 # TechStore
-Ni har fått ett uppdrag där ni skall bygga en hemsida för ett nystartat företag som säljer teknikprylar. Företaget heter TechStore och har bett om er hjälp för att bygga deras e-handelssida. 
+Vi har fått ett uppdrag där vi skall bygga en hemsida för ett nystartat företag som säljer teknikprylar. Företaget heter TechStore och har bett om vår hjälp för att bygga deras e-handelssida. 
 
 
-länk github: https://github.com/AminaHallam/TechStore
+länk gitHub: https://github.com/AminaHallam/TechStore
 
 krav vi har gått efter:
-Navigationsbar:
+Navigationsbar
 
 <!-- Hemsidan skall innehålla en fixerad navigationsbar längst upp på sidan som går hela vägen från vänster till höger. -->
 
@@ -15,7 +15,7 @@ Navigationsbar:
 
 <!-- När en produkt läggs till i kundvagnen skall detta reflekteras med att det visas en siffra intill kundvagnsknappen som reflekterar antalet produkter i kundvagnen. -->
 
-Startsida:
+Startsida
 
 <!-- Startsidan skall lista produkterna som finns i products.json filen. -->
 
@@ -25,7 +25,7 @@ Startsida:
 
 <!-- Produkterna som har lags till i kundvagnen skall sparas i localStorage så det är möjligt att komma åt informationen från alla sidor. -->
 
-Kundvagnssida:
+Kundvagnssida
 
 <!-- Kundvagnssidan skall lista produkterna som användaren har lagt till i kundvagnen. -->
 
@@ -42,9 +42,9 @@ pup. -->
 
 
 
-VG
+<!--VG-->
 <!-- När man bekräftar ett köp skall kundvagnen tömmas. -->
 
 
  
-länk github: https://github.com/AminaHallam/TechStore
+länk gitHub: https://github.com/AminaHallam/TechStore

@@ -1,5 +1,4 @@
 
-
 function getProductsFromCart() {
     
     let cart = localStorage.getItem("cart")         
@@ -37,7 +36,7 @@ function createCartContainer(cartItem) {
 
     cartImgContainer.append(itemImg)
     
-    // Title container 
+    // Title & quantity container 
     let itemTitleContainer = document.createElement("div")
     itemTitleContainer.classList.add("itemTitleContainer")
 
@@ -103,7 +102,6 @@ function removeItemFromCart(cartItem) {
 }
 
 // End Of sale Button 
-
 function createEndOfSaleContainer(cart) {
 
     let totalPrice = 0
@@ -131,21 +129,17 @@ function createEndOfSaleContainer(cart) {
         window.location = "index.html"
         
     })
-   
 
     let checkIcon = document.createElement("i")
     checkIcon.className = "fas fa-check"
     checkIcon.classList.add("checkLogo")
     
-   
     endOfSaleButtonContainer.append(checkIcon, endOfSaleButton)
+
 
     priceAndCheckoutSection.append(totalPriceContainer, endOfSaleButtonContainer)
       
-
 }
-
-
 
 function getNrOfCartItems() {
     let saveProducts = document.getElementsByTagName("span")[0]
