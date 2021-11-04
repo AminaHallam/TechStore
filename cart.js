@@ -11,6 +11,8 @@ function getProductsFromCart() {
     }
     
     let section = document.getElementsByClassName("sectionCart")[0];
+    section.innerHTML = ""
+
     for (var i = 0; i < cart.length; i++) {
         let itemContainer = createCartContainer(cart[i]);
         
@@ -41,9 +43,13 @@ function createCartContainer(cartItem) {
 
     let itemTitle = document.createElement("h1")
     itemTitle.classList.add("itemTitle")
-    itemTitle.innerText = cartItem.product.title
+    itemTitle.innerText = cartItem.product.title 
 
-    itemTitleContainer.append(itemTitle)
+    let quantityOfProduct = document.createElement("h3")
+    quantityOfProduct.classList.add("quantityOfProduct")
+    quantityOfProduct.innerText = cartItem.quantity + " " + "st" 
+
+    itemTitleContainer.append(itemTitle, quantityOfProduct)
 
     // Price Container 
     let itemPriceContainer = document.createElement("div")
@@ -51,7 +57,7 @@ function createCartContainer(cartItem) {
 
     let itemPrice = document.createElement("h2")
     itemPrice.classList.add("itemPrice")
-    itemPrice.innerText = cartItem.product.price + " kr"
+    itemPrice.innerText = cartItem.product.price + " kr" 
 
     itemPriceContainer.append(itemPrice)
 
@@ -61,7 +67,7 @@ function createCartContainer(cartItem) {
     removeItemButtonContainer.addEventListener("click", () => {
         removeItemFromCart(cartItem)
         getNrOfCartItems()
-        window.location = "kundvagn.html"
+    
     });
 
     // Remove products in cart Button
@@ -92,6 +98,8 @@ function removeItemFromCart(cartItem) {
     cart = JSON.stringify(cart);
 
     localStorage.setItem("cart", cart);
+
+    getProductsFromCart()
 }
 
 // End Of sale Button 
@@ -104,12 +112,12 @@ function createEndOfSaleContainer(cart) {
     })
 
     let priceAndCheckoutSection = document.getElementsByClassName("sectionPrice")[0]
-
+    priceAndCheckoutSection.innerHTML = ""
     // Creates container for Total price
     let totalPriceContainer = document.createElement("div")
     totalPriceContainer.classList.add("totalPriceContainer")
     totalPriceContainer.innerText = "Totalt pris:" + " " + totalPrice + " " + "kr"
-
+   
     // 
     let endOfSaleButtonContainer = document.createElement("div")
     endOfSaleButtonContainer.classList.add("endOfSaleButtonContainer")
@@ -121,13 +129,14 @@ function createEndOfSaleContainer(cart) {
         alert("Tack för ditt köp!")
         localStorage.removeItem("cart")
         window.location = "index.html"
-        // Töm carten (cart i localstorage) och navigerar till startsidan
+        
     })
+   
 
     let checkIcon = document.createElement("i")
     checkIcon.className = "fas fa-check"
     checkIcon.classList.add("checkLogo")
-
+    
    
     endOfSaleButtonContainer.append(checkIcon, endOfSaleButton)
 
