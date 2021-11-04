@@ -11,7 +11,7 @@ function getProductsFromCart() {
     }
     
     let section = document.getElementsByClassName("sectionCart")[0];
-    for (var i = 0; i <cart.length; i++) {
+    for (var i = 0; i < cart.length; i++) {
         let itemContainer = createCartContainer(cart[i]);
         
         section.appendChild(itemContainer)
@@ -55,16 +55,16 @@ function createCartContainer(cartItem) {
 
     itemPriceContainer.append(itemPrice)
 
-    //REMOVE Button Container
+    //REMOVE product in cart Button Container
     let removeItemButtonContainer = document.createElement("div")
     removeItemButtonContainer.classList.add("removeItemButtonContainer")
     removeItemButtonContainer.addEventListener("click", () => {
         removeItemFromCart(cartItem)
         getNrOfCartItems()
-        JSON.parse(localStorage.getItem("cart"))
+        window.location = "kundvagn.html"
     });
 
-    // Remove Button
+    // Remove products in cart Button
     let icon = document.createElement("i")
     icon.className = "far fa-trash-alt"
     icon.classList.add("trashcanCart")
@@ -84,7 +84,7 @@ function removeItemFromCart(cartItem) {
     
     let cart = JSON.parse(localStorage.getItem("cart"));
 
-    for (var i =0; i< cart.length; i++) {
+    for (var i = 0; i < cart.length; i++) {
         if (cartItem.product.title == cart[i].product.title) {
             cart.splice(i, 1);
         }
@@ -119,7 +119,9 @@ function createEndOfSaleContainer(cart) {
     endOfSaleButton.innerText = "Slutför ditt köp"
     endOfSaleButton.addEventListener("click", () => {
         alert("Tack för ditt köp!")
-        // Töm carten (cart i localstorage) och navigera till startsidan
+        localStorage.removeItem("cart")
+        window.location = "index.html"
+        // Töm carten (cart i localstorage) och navigerar till startsidan
     })
 
     let checkIcon = document.createElement("i")
