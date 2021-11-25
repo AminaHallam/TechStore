@@ -18,22 +18,29 @@ function initSite() {
 
 } 
 
+
+
 function addProductsToWebpage() {
-
+    
     let main = document.getElementsByTagName("main")[0];
-
+    let isGrey = false
+    
     for (var i = 0; i <listOfProducts.length; i++) {
-        let productContainer = createProductContainer(listOfProducts[i]);
-
+        let productContainer = createProductContainer(listOfProducts[i], isGrey);
+    
         main.appendChild(productContainer)
+        isGrey = !isGrey
     };
+
 }
 
 
-function createProductContainer(product) {
+function createProductContainer(product, isGrey) {
     let productContainer = document.createElement("div")
     productContainer.classList.add("productContainer")
-
+    if(isGrey){
+        productContainer.style.backgroundColor = ("#f5f5f5")
+    }
     // Text container
     
     let textContainer = document.createElement("div")
@@ -87,13 +94,16 @@ function createProductContainer(product) {
     
     productContainer.append(textContainer, imageContainer, priceText, buttonContainer)
     return productContainer
+
 }
+
+
+
 
 window.addEventListener("load", () => {
     initSite()
     getNrOfCartItems()
 }) 
-
 
 function addToCart(product) {
     
