@@ -48,3 +48,4 @@ pup. -->
 
  
 länk gitHub: https://github.com/AminaHallam/TechStore
+Länk till webbsidan: https://aminahallam.github.io/TechStore/index.html
